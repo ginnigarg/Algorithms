@@ -4,7 +4,6 @@
         int num,count=0,i=1;
         printf("Enter the number : ");
         scanf("%d",&num);
-
         while(!(num%10))
         {
             count++;
