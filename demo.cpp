@@ -59,9 +59,9 @@ int main()
 						f1=new node;
 						f1->data=d;
 						f1->next=head;
-					  head=f1;
+					  	head=f1;
 						count++;
-            print(head);
+            					print(head);
 					}
 					break;
 				}
@@ -72,13 +72,21 @@ int main()
 					cin>>n;
 					for(int i=0;i<n;i++)
 					{
-            ptr=head;
+            					ptr=head;
 						cout<<"enter the element"<<endl;
 						cin>>d;
 						cout<<"enter the position"<<endl;
 						cin>>pos;
-            s=new node;
-            printf("%d %d\n",d,pos);
+            					s=new node;
+           					printf("%d %d\n",d,pos);
+						if(pos==0){
+							s->data=d;
+					      		s->next=head;
+							head=s;
+							count++;
+							print(head);
+							break;
+					    	}
 						c=1;
 						while(c!=pos && ptr->next!=NULL)
 						{
@@ -89,17 +97,17 @@ int main()
 						s->next=ptr->next;
 						ptr->next=s;
 						count++;
-            print(head);
+            					print(head);
 					}
 
 					break;
 				}
 			case 3:
 				{
-          ptr=head;
-          while(ptr->next){
-            ptr=ptr->next;
-          }
+          				ptr=head;
+          				while(ptr->next){
+            				ptr=ptr->next;
+          				}
 					cout<<"enter the no of elements to be added"<<endl;
 					cin>>n;
 					for(int i=0;i<n;i++)
@@ -112,9 +120,9 @@ int main()
 						ptr->next=f1;
 						ptr=f1;
 						count++;
-            print(head);
+            					print(head);
 					}
-          //print(head);
+          				//print(head);
 					break;
 				}
 
